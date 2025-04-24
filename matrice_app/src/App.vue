@@ -9,17 +9,17 @@ import AffichageGenerations from './components/AffichageGenerations.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 p-6">
+  <div class="min-h-screen bg-gray-300 p-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <!-- Colonne de gauche -->
-      <div class="space-y-6">
+      <div class="space-y-6 bg-white rounded-sm">
         <FicheMagasin />
         <Description />
         <Categorisation />
       </div>
 
       <!-- Colonne de droite -->
-      <div class="space-y-6">
+      <div class="space-y-6 bg-white rounded-lg">
         <Actions />
         <CreationDossier />
         <AffichageGenerations />

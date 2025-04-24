@@ -1,5 +1,5 @@
 <template>
-    <section class="border p-4">
+    <section class="border-2 p-4">
       <h2 class="font-bold text-blue-800 text-center">ACTIONS</h2>
       <p class="text-red-600 text-xs">
         Merci d'effectuer les tâches supports ci dessous<br/>
