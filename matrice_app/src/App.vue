@@ -12,7 +12,7 @@ import AffichageGenerations from './components/AffichageGenerations.vue'
   <div class="min-h-screen bg-gray-300 p-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <!-- Colonne de gauche -->
-      <div class="space-y-6 bg-white rounded-sm">
+      <div class="space-y-6 bg-white rounded-lg">
         <FicheMagasin />
         <Description />
         <Categorisation />
