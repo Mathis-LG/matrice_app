@@ -1,0 +1,358 @@
+﻿MOT CLe;Description;cat3;cat1;cat2;CATEGORISATION;Service Libelle d'affichage / Impactant;Causalite;Tag+E:ED:IJ30F:IC:IB:I;SUPPORT;PRIORISATION;CAS;Autonomie;DATE CREATION;PM;Msg spe;Lien;POPUP ajout;Mess_axis;Impacté;Categorisation Service impacte ;KM;GROUPE EXPERT; 
+SCO -IMP KO;SCO NCR : erreur imprimante 11-0-0-99--2 ;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Parametrage \ Imprimante;SCO NCR-FR;07 - Indéterminée;IMP KO;MATRICE SCO. Vérification des points : Problème réseau caiseau et Voyant SLIP allumé;P3;SYM1000; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Parametrage \ Imprimante;26731835; ; 
+MATERIEL KO : SCO;SCO NCR :  ne demarre pas;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture;SCO NCR-FR;01 - Défaillance applicative;SERVICE UTILISATEUR;"Supprimer le caissier en erreur et recréer proprement avec le bon mdp
+Après reboot du SCO , tester l'accès.";P3;SYM1001; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture;26731835; ; 
+MATERIEL KO : SCO;SCO NCR :l'encaissement ne reagit plus ni en tactile ni en PMAD.;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture;SCO NCR-FR;01 - Défaillance applicative;SERVICE UTILISATEUR;MATRICE SCO;P3;SYM1002; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture;26731835; ; 
+SCO - NCR - LOGICIEL;SCO NCR :Mise à jour au niveau des SCO , les SCO se sont reboot en plein encaissement;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture;SCO NCR-FR;07 - Indéterminée;SCO - NCR - LOGICIEL;recuperation des logs et envoi bannette NCR LOGICIEL;P3;SYM1003; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture;26731835; ; 
+SCO : FIDELITe : Carte FID KO;SCO NCR :Demande la carte fidelite alors que le magasin n'en prend pas;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture;SCO NCR-FR;04 - Manque de formation utilisateur;AUTONOMIE UTILISATEUR;recuperation des logs et envoi bannette NCR LOGICIEL;P3;SYM1004;A/U : Oui; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture;26731835; ; 
+MATERIEL KO : SCO;SCO NCR :  les tickets ne s'impriment pas.;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Parametrage \ Imprimante;SCO NCR-FR;01 - Défaillance applicative;SCO;Reboot SCO, il y a une erreur imprimante. Corrige l'erreur si KO DI. Vérification des points : Problème réseau caiseau et Voyant SLIP allumé;P3;SYM1005; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Parametrage \ Imprimante;26731835; ; 
+SCO - IMP KO;SCO NCR : Imprimante sco-ncr 25 KO - Code d'erreur 3-0-0--99-0 - Diode verte allumee;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Parametrage \ Imprimante;SCO NCR-FR;08 - Matériel défectueux;SCO - IMP KO;"Reset //Vérification des points : Problème réseau caiseau et Voyant SLIP allumé
+Papier bien insere, bon rouleau de papier dejà contrôle par un tech lors d'un precedent passage
+Reboot
+Suppression caddruntime.dat + reboot - BSOD constate lors du reboot, si nok DI";P3;SYM1006; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Parametrage \ Imprimante;26731835; ; 
+SCO - NCR - LOGICIEL : Message;SCO NCR :sur  'traitement en cours veuillez patienter.';Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture;SCO NCR-FR;04 - Manque de formation utilisateur;AUTONOMIE UTILISATEUR;Attendre la fin du traitement pensez reboot SCO au besoin;P3;SYM1007;A/U : Oui; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture;26731835; ; 
+SCO - BSOD;SCO NCR : ecran bleu ;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture;SCO NCR-FR;01 - Défaillance applicative;SCO;Redemarrage si KO, verification des branchement ethernet si KO prise des log et esc SCO-NCR - LOGICIEL.;P3;SYM1008; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture;26731835; ; 
+SCO - NCR - LOGICIEL;SCO NCR : le monnayeur avale les billets sans valider l'encaissement;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO;Reboot SCO, il y a une erreur imprimante. Corrige l'erreur si KO DI FR_IT_EDITEUR_N3_SCO_NCR_MATERIEL_ODM.;P3;SYM1009; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO - NCR - LOGICIEL;SCO NCR : Tickets en attentes en sur des SCO et n'a pas eu les ticket pour les reprendre sur d'autres caisses . ;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Impression \ Ticket de caisse;SCO NCR-FR;01 - Défaillance applicative;SCO - NCR - LOGICIEL; ;P3;SYM1010; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Impression \ Ticket de caisse;26731835; ; 
+SCO - NCR - MONNAYEUR;SCO NCR : le module cash billet de notre sco est hs.;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO;Reboot SCO, il y a une erreur imprimante. Corrige l'erreur si KO DI.;P3;SYM1011; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+MATERIEL KO : SCO;"SCO NCR : boucle de demande de connexion hotesse + ""Erreur imprimante ticket""";Autre (logiciel);Encaissement;SCO;Caisse libre service \ Parametrage \ Imprimante;SCO NCR-FR;08 - Matériel défectueux;SCO - NCR - MATERIEL KO;traiter l'erreur imprimante correspondant au code en se referant à la matrice.;P3;SYM1012; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Parametrage \ Imprimante;26731835; ; 
+MATERIEL KO : SCO;SCO NCR : demande de perte de clefs jaune sur les caisse libre service.;Autre (logiciel);Encaissement;SCO;Materiel \ SCO \ NCR;MATERIEL_SCO-FR;08 - Matériel défectueux;AUTONOMIE UTILISATEUR;DEVIS;P3;SYM1013;A/U : Oui; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;MATERIEL_SCO_NCR-FR;Materiel \ SCO \ NCR;26731835; ; 
+SCO - NCR -LOGICIEL;"SCO NCR : ""Connexion hotesse"" grise";Autre (logiciel);Encaissement;SCO;Caisse libre service \ Ouverture \ Connexion hotesse grisee;SCO NCR-FR;01 - Défaillance applicative;SCO - NCR -LOGICIEL; Supprimer les fichiers INITBASE et CADDRUNTIME et Reboot de la SCO => Si KO ESCALADE N2;P3;SYM1014; ; ; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Ouverture \ Connexion hotesse grisee;26731835; ; 
+SCO DIEBOLD;SCO DIEBOLD ne charge pas , dll manquante; ;Caisse libre service ;Parametrage;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative;SYSTEM;Recuperer sur un autre SCO la DLL dans D pos caisse prog bin. ;P4;SYM1015; ; ; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Parametrage;; ; 
+SCO NCR-FR : Ouverture caisse / Identification hôtesse / connexion;SCO NCR : Login operateur refuse;Bloque / figee;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Ouverture caisse / Identification hôtesse / connexion;" > Verifier que le badge n'a pas expire (Est-ce que le badge a ete imprime ce-jour ?)
+> Demander de saisir le code au lieu de scanner le badge, 
+- si ok, demander de reimprimer le badge
+- si non ok, demander de verifier le code operateur et son mot de passe sur Carine et demander de modifier le mot de passe sur Carine
+Si KO, escalader au niveau 2 | SI ESC : > Verifier le code operateur et mot de passe sur Carine
+> Verifier le log c:\scot\log\posm.log
+> Si KO, Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel (ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1016; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Ouverture caisse / Identification hôtesse / connexion;SCO NCR : Caisse bloquee - Reste sur NCR SELF SERV CHECKOUT;Bloque / figee;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Ouverture caisse / Identification hôtesse / connexion;" > Redemarrer le caisse
+Si KO, escalader le dossier | SI ESC : Generer un fichier diagnostic et escalader (ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT UMA N3 Encaissement";P3;SYM1018; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Message article inconnu à l'ecran;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" > Verifier que l'article passe bien en caisse traditionnelle
+Si oui escalader vers le niveau 2, sinon demander au magasin de verifier l'article sur l'encaissement | SI ESC : > Si le problème ne se produit que sur le SCO > Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT UMA N3 Encaissement";P3;SYM1019; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Difficultes pour scanner l'article;Scanner;Caisse libre service ;Parametrage;Caisse libre service \ Parametrage \ Scanner;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" > Verifier la qualite des codes-barre
+> demander à l'hotesse de saisir le code | SI ESC : > Si problème systematique escalader au niveau 3 avec les tests realises FR IT UMA N3 Encaissement";P3;SYM1020; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Parametrage \ Scanner;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Article affiche different du produit scanne ou prix different;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" > Verifier que l'article passe bien en caisse traditionnelle
+- Si oui, escalader vers niveau 2, sinon problème encaissement | SI ESC : > Si le problème ne se produit que sur le SCO (et non sur caisse traditionnelle) > Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1021; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Douchette ne fonctionne pas;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" > Verifier la connexion de la douchette (port USB)
+> Demander au magasin de reparametrer la douchette avec la planche de code à barres | SI ESC : Si connexion et reparametrage effectue, escalader vers NCR niveau 3 materiel FR IT EDITEUR N3 SCO NCR MATERIEL ODM";P3;SYM1022; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Se bloque quand le client clique sur scan pour les scanettes;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" Si le SCO affiche transaction non trouvee, verifier sur Carine si les fichiers sont bien transferes dans le repertoire c:\SCAN 
+Si le SCO se bloque sans message, generer un fichier diagnostic
+=> escalader au N3 pour pousser les contrôles : reseau, AP1 ...
+ ";P3;SYM1023; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Ecran blanc;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" Si ecran complètement blanc essayer un reboot complet du SCO
+Si toujours problème escalader vers NCR niveau 3 materiel
+
+Si l'ecran comporte un message noter le message et tenter un reboot complet du SCO
+Si toujours problème escalader vers NCR niveau 3 logiciel ";P3;SYM1024; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Scanning article;SCO NCR : Problème d'enregistrement article sans code à barres;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Scanning article;" > Demander quel est l'article en question
+> Noter son code | SI ESC : > Si une seule caisse concernee, reprendre le fichier picklist d'une autre caisse et le deposer sur la caisse KO
+> Verifier le fichier picklist
+> Verifer l'import du fichier picklist
+Si toujours pb generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1025; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Validation poids;SCO NCR : Poids en erreur systematique;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Validation poids; Faire verifier le positionnement du plateau sur la balance de securite et redemarer le SCO. Si toujours problème escalader vers NCR materiel ;P3;SYM1026; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Validation poids;SCO NCR : Poids incoherent;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Validation poids;" Demander le type d'article : 
+- Si article normal, verifier le poids dans la base poids, si le poids est incoherent, demander de supprimer le poids il sera appris correctement au prochain passage
+- Si article de type pesee en rayon, escalader vers niveau 2 | SI ESC : > Demander le type d'article
+- Si article de type ""pese en rayon"" (ex. orange) verifier le prix au kilo sur l'encaissement. Demander au magasin de faire corriger le prix au kilo 
+- Si article normal, verifier le poids dans la base poids
+
+> Contrôler l'enregistrement sur une caisse traditionnelle
+si même anomalie, escalader côte encaissement
+si pas d'anomalie, escalader au N3 FR IT UMA N3 Encaissement";P3;SYM1027; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Validation poids;SCO NCR : Article non reconnu sur la balance;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Validation poids;" Si article leger demander d'attendre 3 passages de cet article, il sera appris en tant qu'article non-pese
+Si le problème persiste ou autre problème, escalade au N3 NCR MATERIEL ";P3;SYM1028; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Identification client;SCO NCR : Carte de fidelite ou PASS non reconnue;Fidelite;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Identification client;" > Demander si problème uniquement en SCO ou egalement en caisse traditionnelle | SI ESC : > Si problème uniquement sur SCO, generer un fichier diagnostic et escalader au niveau 3
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) 
+> Si problème plus general, voir avec le N3 FR IT UMA N3 Encaissement";P3;SYM1029; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Identification client;SCO NCR : Problème de scan de la carte de fidelite;Fidelite;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Identification client;" > Verifier la qualite des codes-barre
+> Demander à l'hotesse de saisir le code
+ ";P3;SYM1030; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Identification client;SCO NCR : Problème de scan du mobile du client;Fidelite;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Identification client;" > Demander au magasin de reparametrer la douchette avec la planche de code à barres
+> Augmenter le contraste sur le telephone ";P3;SYM1031; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : CPN / Promotions;SCO NCR : Bons de reduction / Remises immediates / non pris en compte;Fidelite;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : CPN / Promotions;" > Verifier que la promotion existe (et qu'elle est activee)
+> Verifier si le serveur FID est joignable et que le client a bien le droit a la promo sur le moteur de promo
+> Verifier qu'il n'y a pas d'erreur au niveau des logs scaneo en lien avec le moteur de promo et qu'il n' y a pas d'alerte au niveau du back office scaneo, menu 'ACCUEIL --> Alarmes
+> Verifier la validite des status caisse sur Carine | SI ESC : > Verifier sur l'encaissement que les appels maxxing sont OK (similaires à une caisse traditionelle)
+Si problème uniquement sur SCO escalader au niveau 3 FR IT UMA N3 Encaissement";P3;SYM1032; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Cagnotte;SCO NCR : La cagnotte ne s'affiche pas ou est à zero;Fidelite;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Cagnotte;" > Verifier que le serveur STAC est joignable et que le client a bien un solde > 0 sur STAC
+
+
+Verification des logs par le N2 | SI ESC : > Si STAC n'est pas joingable --> remonter le problème au support STAC N3
+> Si le serveur SCANEO n'arrive pas à joindre le serveur STAC --> remonter le problème au support STAC N3 FR IT UMA N3 Encaissement";P3;SYM1033; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : TPE ne s'active pas;Fidelite;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement; > Faire verifier les connexions du TPE ;P3;SYM1034; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : La carte est refusee;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Si le problème est systematique sur tous les clients et uniquement sur les SCO
+Generer un DIAG et escalader vers le niveau 2
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) | SI ESC : > Verifier le log c:\scot\log\posm.log + reboot du SCO
+> Si pb non resolu et que le problème ne se pose que sur les SCO, generer un diag et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1035; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Ticket Reestaurant Dematerialise - Solde elligible à zero;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Verifier que la transaction du client contient des articles elligibles
+> Si oui, escalader vers niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log + reboot du SCO
+> Si pb non resolu et que le problème ne se pose que sur les SCO, generer un diag et escalader au N3 pour contrôler côte monetique
+ FR IT UMA N3 Encaissement";P3;SYM1036; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Paiement espèces non-disponible;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Verifier que la caisse est bien en mode ESPECE (bon code operateur connecte) et pas uniquement CB 
+> Demander de quitter le mode espèces uniquement, les modules espèces vont se reinitialiser, si pas d'erreur demander de reessayer le mode de paiement espèces ";P3;SYM1037; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Mauvais rendu monnaie;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Demander les donnees de la transaction : Total, rendu monnaie theorique du ticket, et rendu reel au client
+> Generer un fichier diagnostic et escalader vers niv 2 | SI ESC : > Generer un fichier diagnostic et escalader vers niveau 3 (ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT UMA N3 Encaissement";P3;SYM1038; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : La CAISSE SCO n'accepte plus les espèces;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Redemarrer le module
+> Prelèvement à effectuer
+Si KO, escalader le dossier ";P3;SYM1039; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Paiement partiel indisponible;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Si le problème est systematique sur tous les clients et uniquement sur les SCO
+Generer un DIAG et escalader vers le niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log pour voir le comportement de l'encaissement + reboot du SCO
+> Si problème non resolu, Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1040; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Carrefour Pay indisponible;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Si le problème est systematique sur tous les clients et uniquement sur les SCO
+Generer un DIAG et escalader vers le niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log pour voir le comportement de l'encaissement + reboot TPE
+> Si problème non resolu, generer un fichier diagnostic et escalader au niveau 3 FR IT UMA N3 Encaissement";P3;SYM1041; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Ticket restaurant / services papier non accepte;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Verifier que la transaction possède suffisament d'article elligibles aux titres restaurants
+> Verifier le message s'affichant sur la fenêtre Terminal Services
+> Generer un diagnostic et escalader vers le niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log + reboot du SCO
+> Si pb non resolu et que le problème ne se pose que sur les SCO, generer un diag et escalader au N3 pour contrôler côte encaissement
+ FR IT UMA N3 Encaissement";P3;SYM1042; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : La caisse se bloque lorsque l'on scanne un ticket restaurant;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Demander à l'utilisateur s'il s'agit du 3ième ticket
+Si oui,
+Indiquer au client qu'il ne faut pas scanner plus de 2 tickets (idem caisse classique)
+> Si caisse bloquee, arreter la caisse et la redemarrer
+==> Si pb non resolu, generer un diag et transmettre à NCR Logiciel ";P3;SYM1043; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Paiement carte cadeau non-accepte;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Si le problème est systematique sur tous les clients et uniquement sur les SCO
+Generer un DIAG et escalader vers le niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log + reboot du SCO
+> Si pb non resolu et que le problème ne se pose que sur les SCO, generer un diag et escalader au N3 pour contrôler côte monetique
+ FR IT UMA N3 Encaissement";P3;SYM1044; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : Decagnottage impossible;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Verifier que le serveur STAC est joignable et que le client a bien un solde > 0 sur STAC
+
+Verification des logs par le N2 | SI ESC : > Verifier le log c:\scot\log\posm.log pour voir le comportement de l'encaissement
+> Si problème non resolu, generer un fichier diagnostic et escalader au STAC N3 FR IT UMA N3 Encaissement";P3;SYM1045; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : mode aide indisponible;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" A quel moment de la transaction on est ?
+Si l'utilisateur est sur l'ecran d'accueil, le comportement est normal.
+Si l'utilisateur est en mode paiement, le comportement est normal.
+> Le mode aide est disponible seulement en mode scan
+
+NB : generer un diag avant escalade à NCR ";P3;SYM1046; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Paiement;SCO NCR : La SCO se fige après un paiement;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Paiement;" > Redemarrer la caisse
+> Confirmer que le moyen de paiement a bien ete pris en compte (aller sur le serveur monetique et/ou dans le JE) La transaction est bien passee ? Pas de doublon ? | SI ESC : > Verifier le log c:\scot\log\posm.log pour voir le comportement de l'encaissement
+> Si problème non resolu, Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1047; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fin de transaction;SCO NCR : Ticket ne s'imprime pas / bourrage papier;Imprimante;Encaissement;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Fin de transaction;" > Demander à l'utilisateur de :
+- Verifier le message indiquant un problème Imprimante : Vérification des points : Problème réseau caiseau et Voyant SLIP allumé
+- Enlever le papier, le couper au ciseau et le remettre
+- Verifier que le ticket de test s'affiche correctement
+- Verifier avec le magasin le grammag utilise pour le papier
+
+Si KO, escalader vers NCR niveau 3 materiel ";P3;SYM1048; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fin de transaction;SCO NCR : Ticket sort blanc;Imprimante;Encaissement;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Fin de transaction;" > Le papier a ete probablement charge dans le mauvais sens :
+Demander à l'utilisateur de :
+- enlever le papier, le couper au ciseau et le remettre dans le bon sens
+- verifier que le ticket de test d'affiche correctement
+
+Si KO, escalader vers NCR niveau 3 materiel ";P3;SYM1049; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fin de transaction;SCO NCR : La SCO ne revient pas à l'ecran de bienvenue;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fin de transaction;" > Faire verifier le bon positionnement du plateau balance
+> Demander à l'hôtesse d'appuyer sur Aide et de passer son badge
+> Si problème systematique à chaque client escalader vers NCR niveau 3 logiciel
+
+NB : generer un diag avant escalade ";P3;SYM1050; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fin de transaction;SCO NCR : Pas de coupon imprime;Imprimante;Encaissement;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Fin de transaction; > Faire verifier la connexion et configuration de l'imprimante FID. Vérification des points : Problème réseau caiseau et Voyant SLIP allumé;P3;SYM1051; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fonctions hôtesse;SCO NCR : Les boutons affiches pour un operateur ne sont pas corrects par rapport à son niveau (il a plus de droits ou pas assez de droits);Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fonctions hôtesse; > Verifier le profil de l'utilisateur sur Carine ;P3;SYM1052; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fonctions hôtesse;"SCO NCR : Le menu Maintenance securite affiche : ""Securite Oflline""";Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fonctions hôtesse;" > Verifier la communication vers le SCO maître. Effectuer un ping
+Si ping OK effectuer un redemarrage système du SCO maître
+Si toujours KO escalader vers niveau 2 | SI ESC : > Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1053; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fonctions hôtesse;"SCO NCR : Le menu Rapports indiquent : ""Reporting deconnecte""";Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fonctions hôtesse;" > Verifier la communication vers le SCO maître. Effectuer un ping
+Si ping OK effectuer un redemarrage système du SCO maître
+Si toujours KO escalader vers niveau 2 | SI ESC : > Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1054; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fonctions hôtesse;SCO NCR : Un titre restaurant ne peut être enregistre (message d'erreur);Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fonctions hôtesse;" > Verifier que le total des articles elligibles est correct par rapport au montant du titre restaurant
+> On ne peut pas enregistrer plus de 2 titres restaurant par transaction ";P3;SYM1055; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fonctions hôtesse;SCO NCR : Un titre restaurant ne peut être lu sur la douchette (ne bip pas);Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fonctions hôtesse; > Faire reparametrer la douchette par le magasin ;P3;SYM1056; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fonctions hôtesse;SCO NCR : Impossible d'annuler un article;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fonctions hôtesse; > Reboot du SCO. Si malgre cela le problème est toujours là, envoyer à NCR ;P3;SYM1057; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes ecran;SCO NCR : Ecran noir;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes ecran;" > Demander au magasin de :
+- verifier si l'ecran est allume ou eteint
+- verifier si l'UC est allumee (la rallumer si besoin)
+- verifier les connexions
+- verifier s'il n'y a pas une panne de courant ou si la prise est debranchee
+> Si KO escalader vers NCR Materiel ";P3;SYM1058; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes ecran;SCO NCR : Ecran fige;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes ecran;" > Noter les circonstances de l'incident, actions effectuees precedemment
+> Si possible generer un fichier diagnostic et escalader vers le niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log pour voir le comportement de l'encaissement + reboot du SCO
+> Si problème non resolu, Generer un fichier diagnostic et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1059; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes ecran;SCO NCR : Ecran tacticle non-calibre;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes ecran;" > Demander à l'utilisateur de :
+- redemarrer le système via le menu utilitaires
+Si KO, escalader vers NCR niveau 3 materiel ";P3;SYM1060; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes ecran;SCO NCR : Message antivirus;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes ecran; Escalader vers l'equipe Carrefour en charge de l'antivirus (Bureautique ou equipe Denis Poisson) ;P3;SYM1061; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes ecran;"SCO NCR : Ecrans ""bleu"" Windows (BSOD)";Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes ecran;" Au boot suivant :
+Generer un DIAG et escalader vers NCR niveau 3 logiciel
+Il se peut que la creation du DIAG prenne beacoup de temps (env 30 min), car integration d'un dump memoire ";P3;SYM1062; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes ecran;"SCO NCR : Message ""POS desynchronise""";Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes ecran;" > Demander et noter les circonstances exactes du problème
+> Demander au magasin de reproduire le problème avec connexion à distance
+> Verifier et noter le statut sur la fenêtre Terminal Services.
+Generer un diag et escalader vers niv 3 ";P3;SYM1063; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Fermeture caisse;SCO NCR : La SCO ne se ferme pas;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Fermeture caisse;" > Verifier la fenêtre Terminal Services
+> Generer un fichier diagnostic et escalader vers le niveau 2 | SI ESC : > Verifier le log c:\scot\log\posm.log pour voir le comportement de l'encaissement
+> Si problème non resolu, generer un fichier diagnostic et escalader au N3 FR IT UMA N3 Encaissement";P3;SYM1064; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes de reprise transaction selfscanning;SCO NCR : Transaction non trouvee;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes de reprise transaction selfscanning;" > Verifier sur le BO Scaneo si la transaction est en fin de courses
+> Verifier sur Carine si la transaction est arrivee sur le serveur d'encaissement
+* si arrivee : problème Carine
+* si pas arrivee : problème reseau : se reporter au cas ""echec lors du vidage"" => ouvrir un dossier auprès des equipes reseau | SI ESC : Si souci Carine :
+- verifier la purge des fichiers .OUT
+
+Si les fichiers ne sont pas purges => escalader à FR IT UMA N3 Encaissement pour realisation de la purge sur Carine
+
+Si les fichiers ne sont pas purges => effectuer un 1er contrôle reseau, si pas de souci escalader à FR IT EDITEUR N3 SCO NCR LOGICIEL EXT FR IT UMA N3 Encaissement
+ou
+FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1065; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes de reprise transaction selfscanning;SCO NCR : Ticket errone;Paiement;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes de reprise transaction selfscanning;" > Verifier sur le BO Scaneo si la transaction est presente et la comparer avec la transaction sur Carine (même carte client, même detail de courses)
+> verifier si l'erreur est sur le montant d'un article (attention prix carine qui fait foi) 
+* si pas d'anomalie cloturer l'incident
+* si le ticket affiche en caisse ne correspond pas à la transaction du client transferer l'incident au support N2
+ | SI ESC : Investiguer au niveau N2 (carine ou self scanning)
+
+=> si toujours non resolu, escalader au N3 FR IT UMA N3 Encaissement";P3;SYM1066; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Application;SCO NCR : Problème dB483:B748e connexion entre modules/caisse/reseau;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Application;" > Si pb reseau => escalader au reseau
+
+> Si le pb n'est pas reseau, generer un diagnostic et escalader le dossier à NCR LOGICIEL pour voir d'où vient le problème ";P3;SYM1067; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Materiel;SCO NCR : Materiel KO (Ecran, module, K7…); ;Caisse;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Materiel;" 
+
+> Escalader le dossier vers niveau 3 materiel
+ ";P3;SYM1068; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Materiel;SCO NCR : Porte ne se verrouille / deverrouille pas;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Materiel;  ;P3;SYM1069; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Materiel;"Remplissage
+Bourrage (ex : pièce inseree dans le module billet)"; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Materiel;" CI-10:
+- Se referer au document listant les codes erreurs pour identifier l'origine et localiser le problème dans les modules. | SI ESC : > Generer un fichier diagnostic et escalader vers NCR niveau 3 Glory
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR MATERIEL ODM";P3;SYM1070; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Materiel;SCO NCR : Ticket de caisse bloque et enroule dans l'imprimante;Imprimante;Encaissement;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Materiel;" > Voir si le probleme est systematique > le magasin doit revoir son fournisseur pour changer le grammage du papier. Vérification des points : Problème réseau caiseau et Voyant SLIP allumé
+> Si problème aleatoire > Changer l'imprimante
+> Indiquer à l'utilisateur de sortir un duplicata de la transaction pour le client ";P3;SYM1071; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Materiel;Rejet billet, pièces; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Materiel;" CI-10:
+1. Le problème est systematique
+- Demander à l'utlisateur de verifier l'etat du capteur de reconnaissance (nettoyage)
+- Demander à l'utlisateur de verifier si presence de pièces à l'entree de l'automate billets
+==> Si KO, escalader vers NCR MATERIEL GLORY
+
+2. Si le problème est ponctuel (pièces etrangères ou un billet en particulier)
+le CI-10 fait son travail (rejet contrefaçon ou devise etrangère)
+==> Fermeture de l'incident ";P3;SYM1072; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Materiel;SCO NCR : Le scanner du portillon ne reconnait pas le code à barre de sortie;Scanner / Balance;Encaissement;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Materiel;" Il s’agit probablement du parametrage de ce dernier, son installation et parametrage est effectue par RASEC.
+
+Le magasin doit demander au service technique d'intervenir (celui-ci prend directement contact avec Rasec). Clôturer la demande en demandant à l'utilisateur de solliciter Pascal LEGLISE (06 84 75 48 81 ) ";P3;SYM1073; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Materiel;SCO NCR : Câble arrache; ;Encaissement;Materiel;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Materiel;" 
+Si KO, si le câble est maintenu par NCR, escalader vers NCR niveau 3 materiel ou WIncor. Sinon (ex. câble TPE).";P3;SYM1074; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Encaissement / rendu monnaie;Le client a insere ses pieces/billet, mais machine KO ensuite (pas de rendu monnaie); ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Encaissement / rendu monnaie;" Si message erreur se referer aux documentations
+CI-10B_Code_Erreur.pdf
+CI-10C_Code_Erreur.pdf
+
+Sinon, collecter les logs
+Transferer les logs & etats au SIC N2 FO | SI ESC : Analyser les logs mis à disposition
+
+=> Si analyse KO, escalader vers NCR MATERIEL GLORY FR IT EDITEUR N3 SCO NCR MATERIEL ODM";P3;SYM1075; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Encaissement / rendu monnaie;SCO NCR : Rendu monnaie OK, mais caisse restee en standby ensuite;Poste assistant;Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Encaissement / rendu monnaie;" CI-10:
+> Retirer le(s) billet(s) restant en zone rendu monnaie
+
+Paystation:
+> Collecter les logs du jour concernee
+> Transferer les logs au SIC N2 FO
+
+ | SI ESC : Analyser les logs mis à disposition
+
+=> Si analyse KO, escalader vers NCR niveau 3 logiciel
+
+ FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1076; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Encaissement / rendu monnaie;SCO NCR : Lenteur dans le process (ex : lors du rendu de ma monnaie, lenteur constatee);Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Encaissement / rendu monnaie;" Paystation:
+> Verifier les niveaux et effectuer prelèvement si les niveaux hauts sont atteints.
+
+CI-Server:
+> Verifier les niveaux sur CI-Server (si pas possible depuis Paystation) | SI ESC : Analyser les logs mis à disposition
+
+=> Si analyse KO, escalader vers NCR niveau 3 logiciel FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1077; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Ecart financier;SCO NCR : Ecart de Chiffre d'Affaire et les compteurs SCO;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Ecart financier; Generer un DIAG, recuperer les logs encaissement et escalader vers N3 ;P3;SYM1078; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur \ Erreur prelevement;26731835; ; 
+SCO NCR-FR : Message d'erreur;erreur du distributeur de billet / piece; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Message d'erreur;" Demander à l'utilisateur de faire un arrêt / marche complet des peripheriques espèces : boutons en façade sur le module pièce et module billet et redemarrer tout le système
+
+Generer un diag ";P3;SYM1079; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Message d'erreur;Veuillez patienter pendant la connexion avec le monnayeur; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Message d'erreur;" > Demander à l'utilisateur de faire un arrêt / marche complet des peripheriques espèces : boutons en façade sur le module pièce et module billet et redemarrer tout le système
+
+> Ping de la caisse pour voir si elle repond
+> Verifier le pare-feu 
+> Verifier l'antivirus (quarantaine ...)
+
+Si malgre les contrôles le pb persiste, generer un diag et escalader au N3 NCR MATERIEL GLORY ";P3;SYM1080; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Message d'erreur;erreur statut monnayeur; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Message d'erreur;" Demander à l'utilisateur de faire un arrêt / marche complet des peripheriques espèces : boutons en façade sur le module pièce et module billet et redemarrer tout le système
+
+Generer un diag ";P3;SYM1081; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Message d'erreur;Le periph est offline , code erreur 18.0.0.261.99; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Message d'erreur;" Demander à l'utilisateur de faire un arrêt / marche complet des peripheriques espèces : boutons en façade sur le module pièce et module billet et redemarrer tout le système
+
+Faire un ping de l'adresse IP du Glory. Si KO, escalader ";P3;SYM1082; ;23/02/2023; ; ; ; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;; ; 
+SCO NCR-FR : Message d'erreur;"Code d'erreur : 5-0-0--99-0.
+
+""Appareil hors ligne, verifiez les connexions et/ou le journal des evenements : Glory CI-10 Recycler""
+"; ;Caisse libre service ;Monnayeur;Caisse libre service \ Monnayeur;SCO NCR-FR;08 - Matériel défectueux;SCO NCR-FR : Message d'erreur;" > Demander à l'utilisateur de faire un arrêt / marche complet des peripheriques espèces : boutons en façade sur le module pièce et module billet et redemarrer tout le système.
+> Demander à l'utilisateur de verifier les cables (sont-ils bien branches)
+> Demander au magasin de nettoyer les modules Glory, eventuellement un corps etarnger present
+Et
+Faire un ping de l'adresse IP du Glory. Si KO, escalader ";P3;SYM1083; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Message d'erreur;SCO NCR : recuperation des articles veuillez patienter. ;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Message d'erreur;" Demander à l'utilisateur de scanner à nouveau le code à barres de fin de courses et ressayer | SI ESC : Verifier la presence du fichier SCANIN sur Carine
+- si fichier absent diagnostiquer le problème entre SCANEO et Carine
+- si fichier present Generer un DIAG
+
+Escalader au N3 FR IT UMA N3 Encaissement";P3;SYM1084; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : BRINKS;"SCO NCR : La brinks n'arrive pas a vider les billets car ils ont recu un identifiant qui ne fonctionne pas. ""code obsolète""";Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : BRINKS;" Regression corrigee
+> Verifier que la version logiciel de la SCO est superieure à 2.1.8.120 | SI ESC : Si la version est 2.1.8.120, verifier que le code Brinks est bien sur Profil 5 ou 7 sur Carine
+Si la version est 2.1.8.118, verifier que le code Brinks est bien sur Profil 5
+Si toujours problème Generer un DIAG et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1085; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : BRINKS;SCO NCR : Impossible d'effectuer les prelèvements Billets sur les SCO;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : BRINKS;" Regression corrigee
+> Verifier que la version logiciel de la SCO est superieure à 2.1.8.120 | SI ESC : Si la version est 2.1.8.120, verifier que le code Brinks est bien sur Profil 5 ou 7 sur Carine
+Si la version est 2.1.8.118, verifier que le code Brinks est bien sur Profil 5
+Si toujours problème Generer un DIAG et escalader vers NCR niveau 3 logiciel
+(ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT";P3;SYM1086; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : CARINE - Mot de passe caissière incorrect sur certaines SCO;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee 
+Re Validation du mot de passe des caissières concernees sur Carine
+Regression corrigee ";P3;SYM1087; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : CARINE - Configuration terminale non correcte empechant ouverture de la caisse (non chargement de la caisse);Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee
+Verification des configs terminales et modifications / copie si besoin + le programme terminal associe à la caisse ";P3;SYM1088; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);"SCO NCR : FIDELITE - Après sous total, impossible de valider le message ""avez-vous une carte fid ou non """;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee
+Pb parametrage ""dispositif des devises"" ==> manque n° de devise et libelle EUR indique
+Verifications faites sur l'ensemble des magasins
+Regression corrigee ";P3;SYM1089; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : Le client ne peut pas utiliser sa cagnotte;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations); Inviter le client à payer avec sa cagnotte sur une caisse standard | SI ESC : Verifier la cagnotte du client sur le STAC. Si toujours problème Generer un DIAG et escalader vers NCR niveau 3 logiciel (ajouter le lien filexchange dans le commentaire SANS attacher de PJ au ticket) FR IT EDITEUR N3 SCO NCR LOGICIEL EXT;P3;SYM1090; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR :  Le programme de caisse ne se charge pas (TSNT);Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations); Escalader vers le niveau 2 | SI ESC : Verifier le comportement du programme Terminal Services au demarrage. Si toujours problème Generer un DIAG et escalader au N3 FR IT UMA N3 Encaissement;P3;SYM1091; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : Les articles en codes courts (legume, fruits, pain…) ne sont pas reconnus;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee
+Mise à jour de la base des codes courts sur les SCO
+Regression corrigee
+
+Si ko après application de la procedure, generer un diag ";P3;SYM1092; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : Poids des articles sur la balance non controles (ex : 1 article scanne et 4 poses);Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee
+Mise à jour de la base de la base poids/prix sur les SCO
+
+Si ko après application de la procedure, generer un diag ";P3;SYM1093; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : TPE - Le TPE Lane5000 ne se met pas a jour (serveur non joignable);Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee
+Problèmes de raccordement au reseau (miniswitch)
+Si Ko, refaire la procedure d'initialisation du TPE
+Si tous les TPE sont concernes, escalader aux equipes monetique ";P3;SYM1094; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : SCO - Carte IO HS;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Problèmes techniques (installations);" Solution appliquee
+Remplacer la carte HS 
+> Escalader à NCR ";P3;SYM1095; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR-FR : Mise à jour version SCO;SCO NCR : La caisse n'a la bonne version de l'application;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Monnayeur;SCO NCR-FR;01 - Défaillance applicative;SCO NCR-FR : Gestion des versions;Envoyer le CARE dans la banette du projet NCR pour demander la MAJ du SCO : FR PROJET CSS N3 SCO NCR;P3;SYM1096; ;23/02/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Monnayeur;26731835; ; 
+SCO NCR : 24/24;SCO NCR : mode 24/24;Autre (logiciel);Encaissement;SCO;Caisse libre service \ Caisse deconnecte \ Caisse en autonome;SCO NCR-FR;01 - Défaillance applicative;SCO NCR : 24/24;Desactivation via le menu + reboot = OK;P4;SYM1097; ;16/03/2023; ; ;http://sym-90065/encaissement/PRODIM/?q=26731835; ; ;SCO NCR-FR;Caisse libre service \ Caisse deconnecte \ Caisse en autonome;26731835; ; 
+SCO : Erreur Interface numérique;Periphérique est Offline. (code erreur : 18-0-0-261--99);NCR;Materiel;SCO;Materiel \ SCO \ NCR;Materiel_SCO-FR;08 - Matériel défectueux;SCO : Erreur Interface numérique;"La carte IO est débranchée; il faut passer un ODM";P3;SYM1098; ;25/03/2024; ; ; ; ; ;MATERIEL_SCO_NCR-FR;Materiel \ SCO \ NCR;; ; 
+SCO DIEBOLD - Vérifier le bouton Pour Imprimer vos tickets;SCO DIEBOLD - Vérifier le bouton Pour Imprimer vos tickets;Ticket de caisse;Caisse libre service;Impression;Caisse libre service \ Impression \ Ticket de caisse;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante. Vérification des points : Problème réseau caiseau et Voyant SLIP allumé;P3;SYM1099; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Impression \ Ticket de caisse;46275233; ; 
+"SCO DIEBOLD - Démarrage d""une caisse en mode SCO, SCA ou SCO + SCA";"SCO DIEBOLD - Démarrage d""une caisse en mode SCO, SCA ou SCO + SCA";Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1100; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;44441655; ; 
+SCO DIEBOLD - Mise à jour des appels prix depuis le poste assistant;SCO DIEBOLD - Mise à jour des appels prix depuis le poste assistant;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1101; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;42528594; ; 
+SCO DIEBOLD - Tous les jours le lancement automatique des SCO DIEBOLD ne se fait pas;SCO DIEBOLD - Tous les jours le lancement automatique des SCO DIEBOLD ne se fait pas;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1102; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;28686611; ; 
+SCO DIEBOLD - Ecran tactile décalé;SCO DIEBOLD - Ecran tactile décalé;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1103; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;28674806; ; 
+SCO DIEBOLD - Les caisses valident les articles alors qu'ils ne sont pas posés sur la balance;SCO DIEBOLD - Les caisses valident les articles alors qu'ils ne sont pas posés sur la balance;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1104; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;25452515; ; 
+SCO DIEBOLD - Demande de paramétrage des clés dallas;SCO DIEBOLD - Demande de paramétrage des clés dallas;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1105; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;23119649; ; 
+SCO DIEBOLD - Poste Assistant se verrouille automatiquement;SCO DIEBOLD - Poste Assistant se verrouille automatiquement;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1106; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;21688648; ; 
+SCO DIEBOLD -Mise à jour d une zone CLS (poste assistant + caisses CLS/SCANLIB);SCO DIEBOLD -Mise à jour d une zone CLS (poste assistant + caisses CLS/SCANLIB);Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1107; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;21412329; ; 
+SCO DIEBOLD - Paramétrage affichage CLS;SCO DIEBOLD - Paramétrage affichage CLS;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1108; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;21369044; ; 
+SCO DIEBOLD - Configuration article sensible;SCO DIEBOLD - Configuration article sensible;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1109; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;17791077; ; 
+SCO DIEBOLD - Bouton cagnotte grisé ou absence de fidelité sur une caisse;SCO DIEBOLD - Bouton cagnotte grisé ou absence de fidelité sur une caisse;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1110; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;3543676; ; 
+SCO DIEBOLD - SCO Pb ouverture portillon des caisses LS , message;SCO DIEBOLD - SCO Pb ouverture portillon des caisses LS , message;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1111; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;128057; ; 
+SCO DIEBOLD - SCO Nettoyage du module billets iCash20 BNR V9;SCO DIEBOLD - SCO Nettoyage du module billets iCash20 BNR V9;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1112; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;127541; ; 
+SCO DIEBOLD - Une seule caisse bloquée sur Sa Command timeout Error;SCO DIEBOLD - Une seule caisse bloquée sur Sa Command timeout Error;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1113; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;127500; ; 
+SCO DIEBOLD - Message 'Initialisation échouée dans initialisation WaiterKeyLock';SCO DIEBOLD - Message 'Initialisation échouée dans initialisation WaiterKeyLock';Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1114; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;127473; ; 
+SCO DIEBOLD - la caisse bloque sur attente demarrage partie caisse;SCO DIEBOLD - la caisse bloque sur attente demarrage partie caisse;Chargement en boucle;Caisse libre service;Ouverture;Caisse libre service \ Ouverture \ Chargement en boucle;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1115; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Ouverture \ Chargement en boucle;127372; ; 
+SCO DIEBOLD - Paramétrage des clés dallas;SCO DIEBOLD - Paramétrage des clés dallas;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1116; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;126840; ; 
+SCO DIEBOLD - Portillon indisponible;SCO DIEBOLD - Portillon indisponible;Parametrage;Caisse libre service; ;Caisse libre service \ Parametrage;SCO DIEBOLD-FR;01 - Défaillance applicative; ;Support fiche KM correspondante.;P3;SYM1117; ;04/07/2024; ; ; ; ; ;SCO DIEBOLD-FR;Caisse libre service \ Parametrage;127306; ; 
+SCO DIEBOLD - Erreur imprimante;SCO DIEBOLD - Erreur imprimante;Imprimante ticket;Materiel;SCO;Materiel \ SCO \ Imprimante ticket;Materiel_SCO-FR;08 - Matériel défectueux; ;Deb/reb imp + vérification voyants;P3;SYM1118; ;01/08/2024; ; ; ; ; ;MATERIEL_SCO_NCR-FR;Materiel \ SCO \ Imprimante ticket;;FR IT SIAM N3 SCO WINCOR ODM; 
+SCO NCR-FR : Problèmes techniques (installations);SCO NCR : Erreur DOMAINE;;;;;SCO NCR-FR;01 - Défaillance applicative;;"Suivre prodécure pour rajout caisse dans le domaine; Si KO => DI NCR MATERIEL";P3;SYM1119;;06/02/2025;;;;;;SCO NCR-FR;Caisse libre service \ Parametrage;;;

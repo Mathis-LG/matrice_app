@@ -32,10 +32,33 @@ app.get('/test-db', async (req, res) => {
   }
 });
 
-app.get('/magasin/:sycron', async (req, res) => {
+app.get('/incident', async (req, res) => {
+  const { mot_cle } = req.query;
+  if (!mot_cle) {
+    return res.status(400).json({ message: 'Mot clé manquant' });
+  }
+
+  try {
+    const result = await pool.query(
+      'SELECT * FROM description_incidents WHERE mot_cle = $1',
+      [mot_cle]
+    );
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'Aucun incident trouvé pour ce mot clé' });
+    }
+    res.json(result.rows[0]);
+  } catch (error) {
+    console.error('Erreur lors de la récupération de l\'incident:', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
+
+
+app.get('/description_incidents/:sycron', async (req, res) => {
   const { sycron } = req.params;
   try {
-    const result = await pool.query('SELECT * FROM magasin WHERE sycron = $1', [sycron]);
+    const result = await pool.query('SELECT * FROM description_incidents WHERE sycron = $1', [sycron]);
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'Magasin non trouvé' });
     }
