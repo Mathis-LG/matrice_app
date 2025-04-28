@@ -32,6 +32,20 @@ app.get('/test-db', async (req, res) => {
   }
 });
 
+app.get('/magasin/:sycron', async (req, res) => {
+  const { sycron } = req.params;
+  try {
+    const result = await pool.query('SELECT * FROM magasin WHERE sycron = $1', [sycron]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'Magasin non trouvé' });
+    }
+    res.json(result.rows[0]);
+  } catch (error) {
+    console.error('Erreur lors de la récupération du magasin:', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Serveur backend démarré sur http://localhost:${PORT}`);
