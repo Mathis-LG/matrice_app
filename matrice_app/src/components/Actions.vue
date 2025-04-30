@@ -5,11 +5,23 @@
         Merci d'effectuer les tâches supports ci dessous<br/>
         Si vous ne les faites pas, supprimez-les du descriptif généré. DÉTAILLEZ VOS ACTIONS !
       </p>
-      <textarea class="border w-full h-24 mt-2 p-2"></textarea>
+      <textarea class="border w-full h-24 mt-2 p-2" :value="incident?.support"></textarea>
     </section>
   </template>
   
   <script setup>
-  // Composant Actions
+  import { computed } from 'vue'
+  import { useIncidentStore } from '../stores/useIncidentStore'
+  import { defineExpose } from 'vue'
+  
+  const store = useIncidentStore()
+  const incident = computed(() => store.selectedIncident)
+  
+  function reset() {
+    store.selectedIncident = null
+  }
+  
+  defineExpose({ reset })
   </script>
+  
   

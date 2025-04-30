@@ -28,6 +28,7 @@ import { ref, watch } from 'vue'
 
 const sycronInput = ref('')
 const sycron = ref('') // Ce sera la version complétée en 4 chiffres
+const telephone_entrant = ref('')
 const telephone = ref('')
 const enseigne = ref('')
 const adresse = ref('')
@@ -86,4 +87,24 @@ function handleSycronInput() {
     fetchMagasin()
   }
 }
+
+function reset() {
+  sycronInput.value = ''
+  sycron.value = ''
+  telephone.value = ''
+  telephone_entrant.value = ''
+  enseigne.value = ''
+  adresse.value = ''
+  cp.value = ''
+  ville.value = ''
+  anabel.value = ''
+  caisse.value = ''
+  serveur.value = ''
+}
+
+defineExpose({
+  reset
+})
+
+
 </script>

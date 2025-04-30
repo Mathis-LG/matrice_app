@@ -44,14 +44,15 @@
         v-if="selectedMode === 'sym'"
         class="border w-full h-24 mt-2 p-2 overflow-y-auto text-sm whitespace-pre-line cursor-pointer"
       >
-        <div
-          v-for="line in resultats.sym.split('\n')"
-          :key="line"
-          @click="handleResultClick(line)"
+      <div
+          v-for="(item, index) in resultats.sym"
+          :key="index"
+          @click="handleSymClick(item)"
           class="hover:bg-blue-100 px-1"
         >
-          {{ line }}
+          {{ item.cas }}
         </div>
+
       </div>
 
       <div
@@ -94,19 +95,40 @@
 
       <!-- Boutons d'action visibles uniquement pour anomalie -->
       <div v-if="selectedMode === 'anomalie'" class="flex justify-between mt-2">
-        <button class="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-lg">SYM manquant</button>
-        <button class="cursor-pointer bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded-lg">Site Manquant</button>
-        <button class="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-lg">Correction SYM</button>
+        <button
+          class="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-lg"
+          @click="showSymPopup = true"
+        >
+          SYM manquant
+        </button>
+        <button
+          class="cursor-pointer bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded-lg"
+          @click="showSitePopup = true"
+        >
+          Site manquant
+        </button>
+        <button
+          class="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-lg"
+          @click="showCorrectionSymPopup = true"
+        >
+          Correction SYM
+        </button>
       </div>
     </div>
+    <SymManquant v-if="showSymPopup" @close="showSymPopup = false" />
+    <SiteManquant v-if="showSitePopup" @close="showSitePopup = false" />
+    <CorrectionSym v-if="showCorrectionSymPopup" @close="showCorrectionSymPopup = false" />
   </section>
 </template>
 
 <script setup>
+import SymManquant from './SymManquant.vue'
+import SiteManquant from './SiteManquant.vue'
+import CorrectionSym from './CorrectionSym.vue'
 import { ref, watch } from 'vue'
-import { useSelectionStore } from '../stores/useIncidentStore'
+import { useIncidentStore } from '../stores/useIncidentStore'
 
-const store = useSelectionStore()
+const store = useIncidentStore()
 
 const selectedMode = ref('anomalie')
 
@@ -123,9 +145,12 @@ const resultats = ref({
 })
 
 const symDescription = ref('')
-
 const anomalieResults = ref([])
 const scoResults = ref([]) // <-- nouveau tableau pour résultats SCO
+
+const showSymPopup = ref(false)
+const showSitePopup = ref(false)
+const showCorrectionSymPopup = ref(false)
 
 function switchMode(mode) {
   selectedMode.value = mode
@@ -154,7 +179,8 @@ watch(
         }
 
         const data = await response.json()
-        resultats.value.sym = data.map(item => item.cas).join('\n')
+        // resultats.value.sym = data.map(item => item.cas).join('\n')
+        resultats.value.sym = data // garde les objets
         symDescription.value = ''
       } catch (error) {
         resultats.value.sym = 'Erreur de requête'
@@ -203,25 +229,43 @@ watch(
   }
 )
 
-function handleResultClick(sym) {
-  fetch(`http://localhost:3001/description_incidents/cas/${encodeURIComponent(sym)}`)
-    .then(res => res.json())
-    .then(data => {
-      const item = data.find(i => i.cas === sym)
-      symDescription.value = item?.description || 'Pas de description'
-    })
-    .catch(err => {
-      console.error(err)
-      symDescription.value = 'Erreur lors de la récupération'
-    })
-}
 
 function handleAnomalieClick(item) {
   symDescription.value = item.description || 'Pas de description'
+  store.setIncident(item)
+}
+
+function handleSymClick(item) {
+  symDescription.value = item.description || 'Pas de description'
+  store.setIncident(item)
 }
 
 function handleScoClick(item) {
   symDescription.value = item.description || 'Pas de description'
+  store.setIncident(item)
 }
+
+
+defineExpose({
+  reset
+})
+
+function reset() {
+  selectedMode.value = 'anomalie'
+  searchValues.value = {
+    anomalie: '',
+    sym: '',
+    sco: ''
+  }
+  resultats.value = {
+    anomalie: '',
+    sym: '',
+    sco: ''
+  }
+  symDescription.value = ''
+  anomalieResults.value = []
+  scoResults.value = []
+}
+
 
 </script>
