@@ -32,7 +32,7 @@ function resetFormulaire() {
 
       <!-- Colonne de droite -->
       <div class="space-y-6 bg-white rounded-lg">
-        <Actions ref="actionsRef" /> <!-- ✅ Ref ajoutée -->
+        <Actions ref="actionsRef" /> <!-- Ref ajoutée -->
         <CreationDossier />
         <AffichageGenerations />
         <div class="flex justify-center mt-2">

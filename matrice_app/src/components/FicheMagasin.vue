@@ -10,7 +10,7 @@
         placeholder="CODE SYCRON"
         class="col-span-1 border p-1 bg-red-600 text-white font-bold"
       />
-      <input v-model="telephone_entrant" type="text" placeholder="Numéro de téléphone appelant" class="col-span-1 border p-1 bg-red-600 text-white font-bold" />
+      <input v-model="store.telephone_entrant" type="text" placeholder="Numéro de téléphone appelant" class="col-span-1 border p-1 bg-red-600 text-white font-bold" />
       <input v-model="telephone" type="text" placeholder="Numéro de téléphone " class="col-span-1 border p-1" />
       <input v-model="enseigne" type="text" placeholder="Enseigne" class="col-span-1 border p-1" />
       <input v-model="adresse" type="text" placeholder="Adresse" class="col-span-1 border p-1" />
@@ -25,10 +25,17 @@
 
 <script setup>
 import { ref, watch } from 'vue'
+import { useMagasinStore } from '../stores/useMagasinStore'
+
+const store = useMagasinStore()
+const telephone_entrant = ref('')
+// synchronisation avec le store
+watch(telephone_entrant, (newVal) => {
+  store.telephone_entrant = newVal
+})
 
 const sycronInput = ref('')
 const sycron = ref('') // Ce sera la version complétée en 4 chiffres
-const telephone_entrant = ref('')
 const telephone = ref('')
 const enseigne = ref('')
 const adresse = ref('')
@@ -45,6 +52,8 @@ async function fetchMagasin() {
       throw new Error('Magasin non trouvé')
     }
     const data = await response.json()
+
+    store.setMagasin(data)
 
     telephone.value = data.telephone || ''
     enseigne.value = data.enseigne || ''
@@ -92,7 +101,7 @@ function reset() {
   sycronInput.value = ''
   sycron.value = ''
   telephone.value = ''
-  telephone_entrant.value = ''
+ store.telephone_entrant = ''
   enseigne.value = ''
   adresse.value = ''
   cp.value = ''
