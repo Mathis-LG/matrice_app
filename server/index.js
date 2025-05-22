@@ -99,6 +99,68 @@ app.get('/description_incidents/sco/:terme', async (req, res) => {
   }
 });
 
+// route chercher numéro de caisse 
+app.get('/caisses', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT libelle FROM numero_caisse');
+    res.json(result.rows.map(row => row.libelle));
+  } catch (error) {
+    console.error('Erreur lors de la récupération des caisses :', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
+// route obtenir les niveau de priorité 
+app.get('/niveaux-priorite', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT niveau FROM niveaux_priorite ORDER BY niveau ASC');
+    res.json(result.rows.map(row => row.niveau));
+  } catch (error) {
+    console.error('Erreur lors de la récupération des niveaux de priorité :', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
+// route pour obtenir la liste des groupe de materiel
+app.get('/groupes-materiel', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT DISTINCT groupe_materiel FROM grp_materiel ORDER BY groupe_materiel ASC');
+    res.json(result.rows.map(row => row.groupe_materiel));
+  } catch (error) {
+    console.error('Erreur lors de la récupération des groupes de matériel :', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
+// route materiel en fonction du groupe selectionné
+app.get('/materiels/:groupe', async (req, res) => {
+  const { groupe } = req.params;
+  try {
+    const result = await pool.query(
+      `SELECT DISTINCT materiel FROM grp_materiel WHERE groupe_materiel = $1 ORDER BY materiel ASC`,
+      [groupe]
+    );
+    res.json(result.rows.map(row => row.materiel));
+  } catch (error) {
+    console.error('Erreur lors de la récupération des matériels :', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
+
+// route anomalie en fonction du groupe materiel selectionné
+app.get('/anomalies/:groupe', async (req, res) => {
+  const { groupe } = req.params;
+  try {
+    const result = await pool.query(
+      `SELECT DISTINCT anomalie FROM grp_anomalie WHERE groupe_materiel = $1 ORDER BY anomalie ASC`,
+      [groupe]
+    );
+    res.json(result.rows.map(row => row.anomalie));
+  } catch (error) {
+    console.error('Erreur lors de la récupération des anomalies :', error);
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
 
 
 const PORT = 3001;

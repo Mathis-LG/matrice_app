@@ -94,7 +94,7 @@
       ></textarea>
 
       <!-- Boutons d'action visibles uniquement pour anomalie -->
-      <div v-if="selectedMode === 'anomalie'" class="flex justify-between mt-2">
+      <div  class="flex justify-between mt-2">
         <button
           class="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-lg"
           @click="showSymPopup = true"
@@ -122,9 +122,9 @@
 </template>
 
 <script setup>
-import SymManquant from './SymManquant.vue'
-import SiteManquant from './SiteManquant.vue'
-import CorrectionSym from './CorrectionSym.vue'
+import SymManquant from './description_bouton/SymManquant.vue'
+import SiteManquant from './description_bouton/SiteManquant.vue'
+import CorrectionSym from './description_bouton/CorrectionSym.vue'
 import { ref, watch } from 'vue'
 import { useIncidentStore } from '../stores/useIncidentStore'
 

@@ -1,0 +1,129 @@
+﻿Groupe materiel;Anomalie
+HDD;HDD - IBM - Erreur disk
+HDD;HDD - IBM - DD non détecté
+HDD;HDD - IBM - endommagé
+HDD;HDD - IBM - figé sur mode mainenance
+HDD;HDD - IBM - figé sur missing file
+HDD;HDD - M2 - Erreur disk
+HDD;HDD - M2 - DD non détecté
+HDD;HDD - M2 - endommagé
+HDD;HDD - M2 - figé sur mode mainenance
+HDD;HDD - M2 - figé sur missing file
+HDD;HDD - S2 - Erreur disk
+HDD;HDD - S2 - DD non détecté
+HDD;HDD - S2 - endommagé
+HDD;HDD - S2 - figé sur mode mainenance
+HDD;HDD - S2 - figé sur missing file
+HDD;HDD -M3 - Erreur disk
+HDD;HDD - M3 - DD non détecté
+HDD;HDD - M3 - endommagé
+HDD;HDD - M3 - figé sur mode mainenance
+HDD;HDD - M3 - figé sur missing file
+HDD;HDD - E61 - Erreur disk
+HDD;HDD - E61 - DD non détecté
+HDD;HDD - E61 - endommagé
+HDD;HDD - E61 - figé sur mode mainenance
+HDD;HDD - E61- figé sur missing file
+SERVEUR;SERVEUR - éteint / pas de ping / esxi KO
+IMPRIMANTE;IMP - éteinte
+IMPRIMANTE;IMP - couteau abimé
+IMPRIMANTE;IMP - Voyant ERROR
+IMPRIMANTE;IMP - Voyant PAPEROUT
+IMPRIMANTE;IMP - Voyant SLIP 
+IMPRIMANTE;IMP - Erreur Capot
+IMPRIMANTE;IMP - bruits metaliques
+SCANNER;SCANNER - eteint
+SCANNER;SCANNER  - éteint / Pas de faisceau
+BALANCE;"BALANCE - Cas H + ""---"""
+BALANCE;BALANCE - éteinte
+ECRAN;ECRAN - noir/éteint /No Input
+ECRAN;ECRAN - Tactile KO
+ECRAN;ECRAN - rétroéclairage HS 
+ECRAN;ECRAN - M2 - cassé
+ECRAN;ECRAN - M2 - Fissuré
+ECRAN;ECRAN - M3 - Tactile KO
+ECRAN;ECRAN - M3 - Support
+ECRAN;ECRAN - S2 - noir/éteint /No Input
+ECRAN;ECRAN - S2 - cassé
+ECRAN;ECRAN - S2 - Fissuré
+ECRAN;ECRAN - IBM - noir/éteint
+ECRAN;ECRAN - IBM - cassé
+ECRAN;ECRAN - IBM - Fissuré
+ECRAN;ECRAN - IBM - Tactile KO
+ECRAN;ECRAN - E61 - noir/éteint /No Input
+ECRAN;ECRAN - E61 - cassé
+ECRAN;ECRAN - E61 - Fissuré
+TPE;TPE - Carte invalide
+TPE;TPE - E61 - cassé
+TPE;TPE - Alerte Irruption
+TPE;TPE - Carte muette
+TPE;TPE - Plateform SSC cassée
+TPE;TPE - Erreur port série
+TPE;TPE - éteint
+DOUCHETTE;DOUCHETTE - éteinte
+DOUCHETTE;DOUCHETTE - Pas de BIP, Parametrage KO
+DOUCHETTE;DOUCHETTE  - câble abimé
+TIROIR;TIROIR - E61 - absence d'ergo
+TIROIR;TIROIR - E61  - Rendue monnaie défaillante
+TIROIR;TIROIR - E61 - ne s'ouvre pas
+TIROIR;TIROIR - IBM - absence d'ergo
+TIROIR;TIROIR - IBM  - Rendue monnaie défaillante
+TIROIR;TIROIR - IBM - ne s'ouvre pas
+TIROIR;TIROIR - S/M - absence d'ergo
+TIROIR;TIROIR - S/M  - Rendue monnaie défaillante
+TIROIR;TIROIR - S/M - ne s'ouvre pas
+VISEUR;VISEUR - M3 - noir/éteint
+VISEUR;VISEUR - M3 - cassé
+VISEUR;VISEUR - M3 - Fissuré
+VISEUR;VISEUR - M3 - noir/éteint /No Input
+VISEUR;VISEUR - M3 - câble abimé
+VISEUR;VISEUR -  - éteint
+VISEUR;VISEUR - IBM - noir/éteint
+VISEUR;VISEUR - IBM - cassé
+VISEUR;VISEUR - IBM - Fissuré
+VISEUR;VISEUR - E61 - eteint
+UC;Port com
+UC;Carte mere
+UC;Carte réseau
+UC;PB alimentation
+UC;Ventilateur
+RESEAU;RESEAU - AUT
+RESEAU;RESEAU - Câble abimé
+RESEAU;RESEAU - Mini switch
+SCO NCR;SCO NCR : Poids en erreur systématique
+SCO NCR;SCO NCR : Article non reconnu sur la balance
+SCO NCR;SCO NCR : Problème de scan de la carte de fidélité
+SCO NCR;SCO NCR : Problème de scan du mobile du client
+SCO NCR;SCO NCR : Paiement espèces non-disponible
+SCO NCR;SCO NCR : La CAISSE CLS n'accepte plus les espèces
+SCO NCR;SCO NCR : Ticket ne s'imprime pas / bourrage papier
+SCO NCR;SCO NCR : Ticket sort blanc
+SCO NCR;SCO NCR : Pas de coupon imprimé
+SCO NCR;SCO NCR : Un titre restaurant ne peut être lu sur la douchette (ne bip pas)
+SCO NCR;SCO NCR : Ecran noir
+SCO NCR;SCO NCR : Ecran tacticle non-calibré
+SCO NCR;SCO NCR : Matériel KO (Ecran, module, K7…)
+SCO NCR;SCO NCR : Porte ne se verrouille / déverrouille pas
+SCO NCR;SCO NCR : Ticket de caisse bloqué et enroulé dans l'imprimante
+SCO NCR;SCO NCR : Rejet billet, pièces
+SCO NCR;SCO NCR : Câble arraché
+SCO NCR;"SCO NCR : ""erreur du distributeur de billet / piece"""
+SCO NCR;"SCO NCR : ""Veuillez patienter pendant la connexion avec le monnayeur"""
+SCO NCR;"SCO NCR : ""erreur statut monnayeur"""
+SCO NCR;"SCO NCR : Code d'erreur : 5-0-0--99-0.
+
+""Appareil hors ligne, vérifiez les connexions et/ou le journal des événements : Glory CI-10 Recycler""
+"
+SCO NCR;SCO NCR : CLS - Carte IO HS
+SCO DN;SCO DN : BALANCE 
+SCO DN;SCO DN : TPE 
+SCO DN;SCO DN : SCANNER 
+SCO DN;SCO DN : MONNAYEUR : Paiement espèces non-disponible
+SCO DN;SCO DN : MONNAYEUR : La CAISSE CLS n'accepte plus les espèces
+SCO DN;SCO DN : IMPRIMANTE Ticket ne s'imprime pas / bourrage papier
+SCO DN;SCO DN : IMPRIMANTE Ticket sort blanc
+SCO DN;SCO DN : IMPRIMANTE Pas de coupon imprimé
+SCO DN;SCO DN : DOUCHETTE
+SCO DN;SCO DN : ECRAN
+SCO DN;SCO DN : UC
+SCO DN;SCO DN : DISQUE
