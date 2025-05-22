@@ -6,366 +6,267 @@
       Veuillez sélectionner un groupe matériel pour afficher les actions disponibles.
     </div>
 
-    <div v-else-if="groupe === 'UC'" class="mt-4 grid gap-4">
+    <div v-else class="mt-4 grid gap-4">
+      <!-- Checkboxes -->
       <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> PING</label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Reboot</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> deb/reb alimentation</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Branchement mural</label>
-        <label><input type="checkbox" v-model="actions.checkbox5" /> Vérification onduleur</label>
+        <label v-for="checkbox in currentGroupConfig.checkboxes" :key="checkbox.modelKey" v-show="!checkbox.showIf || actions[checkbox.showIf]">
+          <input type="checkbox" v-model="actions[checkbox.modelKey]" />
+          {{ checkbox.label }}
+        </label>
       </div>
 
-      <div class="grid gap-2">
-        <label>Eventvwr :</label><textarea v-model="text.textarea1" class="border p-1" placeholder="Résultat Eventvwr"></textarea>
-        <label>CHKDSK :</label><textarea v-model="text.textarea2" class="border p-1" placeholder="Résultat CHKDSK"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'SERVEUR'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> PING</label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Reboot</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> deb/reb alimentation</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Branchement mural</label>
-        <label><input type="checkbox" v-model="actions.checkbox5" /> Nettoyage / chgt pate thermique</label>
-        <label><input type="checkbox" v-model="actions.checkbox6" /> Sans conservation des disques</label>
-        <label><input type="checkbox" v-model="actions.checkbox7" /> Cable alimentation et réseau bien branchés</label>
-        <label><input type="checkbox" v-model="actions.checkbox8" /> Cause environnementale: Travaux</label>
+      <!-- CheckboxHidden : affichés selon dependsOn -->
+      <div class="grid grid-cols-2 gap-2" v-if="currentGroupConfig.checkboxHiddens">
+        <label 
+          v-for="chkHidden in currentGroupConfig.checkboxHiddens" 
+          :key="chkHidden.modelKey"
+          v-show="!chkHidden.dependsOn || actions[chkHidden.dependsOn]"
+        >
+          <input type="checkbox" v-model="actions[chkHidden.modelKey]" />
+          {{ chkHidden.label }}
+        </label>
       </div>
 
-      <div class="grid gap-2">
-        <label>Version :</label><textarea v-model="text.textarea1" class="border p-1" placeholder="Version"></textarea>
-        <label>HDD :</label><textarea v-model="text.textarea2" class="border p-1" placeholder="HDD"></textarea>
-        <label class="text-red-600">N° :</label><textarea v-model="text.textarea3" class="border p-1 " placeholder="N°"></textarea>
+      <!-- Textareas -->
+      <div class="grid gap-2" v-if="currentGroupConfig.textareas">
+        <label v-for="textarea in currentGroupConfig.textareas" :key="textarea.modelKey" :class="textarea.class || ''">
+          {{ textarea.label }} :
+          <textarea
+            v-model="text[textarea.modelKey]"
+            class="border p-1"
+            :placeholder="textarea.placeholder"
+          ></textarea>
+        </label>
       </div>
-    </div>
-
-    <div v-else-if="groupe === 'IMPRIMANTE'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Cable data </label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Si voyant, correction </label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Selftest</label>
-        <label><input type="checkbox" v-model="actions.checkbox5" /> IMP désactivée sur VLP</label>
-      </div>
-
-      <div class="grid gap-2">
-        <label class="text-red-600">S\N :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="S\N"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'SCANNER'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> OPOS </label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Faisceau allumé</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Parametrage</label>
-      </div>
-
-      <div class="grid gap-2">
-        <label class="text-red-600">Code erreur si :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="Code erreur si"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'BALANCE'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> OPOS </label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> bat 925 + 924 </label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Vignette conformité </label>
-        <label><input type="checkbox" v-model="actions.checkbox5" /> Nettoyage plateau</label>
-      </div>
-
-      <div class="grid gap-2">
-        <label class="text-red-600">Numero de série :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="Numero de série"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'ECRAN'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> Calibrage écran</label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Molette</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> deb/reb alimentation</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Reboot</label>
-
-      </div>
-
-      <div class="grid gap-2">
-        <label >Type modèle :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="Type modèle"></textarea>
-        <label >S/N (coté écran) :</label><textarea v-model="text.textarea2" class="border p-1 " placeholder="S/N (coté écran)"></textarea>
-        <label >FRU PN (coté écran) :</label><textarea v-model="text.textarea3" class="border p-1 " placeholder="FRU PN (coté écran)"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'TPE'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Souflette insertion CB </label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Jaune + diez</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Alerte irruption</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Reboot</label>
-
-      </div>
-
-      <div class="grid gap-2">
-        <label class="text-red-600">S\N :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="S\N"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'DOUCHETTE'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> SWAP de douchette</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Reboot</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Le scanner est il éteint ?</label>
-      </div>
-
-    </div>
-
-    <div v-else-if="groupe === 'TIROIR'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> Ergo abscent</label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Reboot</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Objet bloquant</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> tiroir désactivé</label>
-      </div>
-
-    </div>
-
-    <div v-else-if="groupe === 'VISEUR'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> reboot</label>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'HDD'" class="mt-4 grid gap-4">
-      <div class="grid gap-2">
-        <label class="text-red-600">Eventvwr :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="Eventvwr"></textarea>
-        <label class="text-red-600">CHKDSK :</label><textarea v-model="text.textarea2" class="border p-1 " placeholder="CHKDSK"></textarea>
-      </div>
-
-    </div>
-
-    <div v-else-if="groupe === 'UC'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Ping</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Branchement mural</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Reboot</label>
-        <label><input type="checkbox" v-model="actions.checkbox5" /> Vérification onduleur</label>
-      </div>
-      <div class="grid gap-2">
-        <label class="text-red-600">S/N :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="S/N"></textarea>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'RESEAU'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Reboot</label>
-      </div>
-    </div>
-
-    <div v-else-if="groupe === 'SCO'" class="mt-4 grid gap-4">
-      <div class="grid grid-cols-2 gap-2">
-        <label><input type="checkbox" v-model="actions.checkbox1" /> deb/reb alimentation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden1" /> Action faite sans succès</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden2" /> Refus manipulation</label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden3" /> Pas d'accès </label>
-        <label v-show="actions.checkbox1"><input type="checkbox" v-model="actions.checkboxhidden4" /> La question n'a pas été posée </label>
-        <label><input type="checkbox" v-model="actions.checkbox2" /> Ping</label>
-        <label><input type="checkbox" v-model="actions.checkbox3" /> Branchement mural</label>
-        <label><input type="checkbox" v-model="actions.checkbox4" /> Reboot</label>
-        <label><input type="checkbox" v-model="actions.checkbox5" /> Péréphérique</label>
-      </div>
-      <div class="grid gap-2">
-        <label class="text-red-600">Vos actions :</label><textarea v-model="text.textarea1" class="border p-1 " placeholder="Vos actions"></textarea>
-      </div>
-    </div>
-
-    <div class="grid gap-2">
-      <label>Actions supplémentaires :</label><textarea v-model="text.complements" class="border p-2" placeholder="Action(s) spécifique(s)"></textarea>
     </div>
   </section>
 </template>
 
+
 <script setup>
-import { ref, watch } from 'vue'
+import { watch, computed } from 'vue'
+import { useActionsDossierStore } from '@/stores/useActionsDossierStore'
 
 const props = defineProps({
   groupe: String
 })
 
-const actions = ref({
-  checkbox1: false, 
-  checkbox2: false, 
-  checkbox3: false, 
-  checkbox4: false, 
-  checkbox5: false, 
-  checkbox6: false, 
-  checkbox7: false, 
-  checkbox8: false, 
-  checkbox9: false, 
-  checkbox10: false, 
-  checkboxhidden1: false, 
-  checkboxhidden2: false,
-  checkboxhidden3: false,
-  checkboxhidden4: false,
-  checkboxhidden5: false
-})
+const actionsDossierStore = useActionsDossierStore()
 
-const text = ref({
-  textarea1: '',
-  textarea2: '',
-  textarea3: ''
-})
+const groupesConfig = {
+  UC: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'Ping' },
+      { modelKey: 'checkbox3', label: 'Branchement mural' },
+      { modelKey: 'checkbox4', label: 'Reboot' },
+      { modelKey: 'checkbox5', label: 'Vérification onduleur' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès' },
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation' },
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès" },
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée" }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'S/N', placeholder: 'S/N' }
+    ]
+  },
 
-// Optionnel : reset des champs quand le groupe change
-watch(() => props.groupe, () => {
-  actions.value = {
-  checkbox1: false, 
-  checkbox2: false, 
-  checkbox3: false, 
-  checkbox4: false, 
-  checkbox5: false, 
-  checkbox6: false, 
-  checkbox7: false, 
-  checkbox8: false, 
-  checkbox9: false, 
-  checkbox10: false, 
-  checkboxhidden1: false, 
-  checkboxhidden2: false,
-  checkboxhidden3: false,
-  checkboxhidden4: false,
-  checkboxhidden5: false
+  SERVEUR: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'PING' },
+      { modelKey: 'checkbox2', label: 'Reboot' },
+      { modelKey: 'checkbox3', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox4', label: 'Branchement mural' },
+      { modelKey: 'checkbox5', label: 'Nettoyage / chgt pate thermique' },
+      { modelKey: 'checkbox6', label: 'Sans conservation des disques' },
+      { modelKey: 'checkbox7', label: 'Cable alimentation et réseau bien branchés' },
+      { modelKey: 'checkbox8', label: 'Cause environnementale: Travaux' }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'Version', placeholder: 'Version' },
+      { modelKey: 'textarea2', label: 'HDD', placeholder: 'HDD' },
+      { modelKey: 'textarea3', label: 'N°', placeholder: 'N°', class: 'text-red-600' }
+    ]
+  },
+
+  IMPRIMANTE: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'Cable data' },
+      { modelKey: 'checkbox3', label: 'Si voyant, correction' },
+      { modelKey: 'checkbox4', label: 'Selftest' },
+      { modelKey: 'checkbox5', label: 'IMP désactivée sur VLP' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1' }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'S/N', placeholder: 'S/N', class: 'text-red-600' }
+    ]
+  },
+
+  SCANNER: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'OPOS' },
+      { modelKey: 'checkbox3', label: 'Faisceau allumé' },
+      { modelKey: 'checkbox4', label: 'Parametrage' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1' }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'Code erreur si', placeholder: 'Code erreur si', class: 'text-red-600' }
+    ]
+  },
+
+  BALANCE: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'OPOS' },
+      { modelKey: 'checkbox3', label: 'bat 925 + 924' },
+      { modelKey: 'checkbox4', label: 'Vignette conformité' },
+      { modelKey: 'checkbox5', label: 'Nettoyage plateau' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1' }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'Numero de série', placeholder: 'Numero de série', class: 'text-red-600' }
+    ]
+  },
+
+  ECRAN: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'Calibrage écran' },
+      { modelKey: 'checkbox2', label: 'Molette' },
+      { modelKey: 'checkbox3', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox4', label: 'Reboot' }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'Type modèle', placeholder: 'Type modèle' },
+      { modelKey: 'textarea2', label: 'S/N (coté écran)', placeholder: 'S/N (coté écran)' },
+      { modelKey: 'textarea3', label: 'FRU PN (coté écran)', placeholder: 'FRU PN (coté écran)' }
+    ]
+  },
+
+  TPE: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'Souflette insertion CB' },
+      { modelKey: 'checkbox3', label: 'Jaune + diez' },
+      { modelKey: 'checkbox4', label: 'Alerte irruption' },
+      { modelKey: 'checkbox5', label: 'Reboot' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1' }
+    ],
+    textareas: [
+      { modelKey: 'textarea1', label: 'S/N', placeholder: 'S/N', class: 'text-red-600' }
+    ]
+  },
+
+  DOUCHETTE: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'SWAP de douchette' },
+      { modelKey: 'checkbox3', label: 'Reboot' },
+      { modelKey: 'checkbox4', label: 'Le scanner est il éteint ?' }
+    ]
+  },
+
+  TIROIR: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'Ergo abscent' },
+      { modelKey: 'checkbox2', label: 'Reboot' },
+      { modelKey: 'checkbox3', label: 'Objet bloquant' },
+      { modelKey: 'checkbox4', label: 'tiroir désactivé' }
+    ]
+  },
+
+  VISEUR: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'reboot' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1' },
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1' }
+    ]
+  },
+
+  HDD: {
+    textareas: [
+      { modelKey: 'textarea1', label: 'Eventvwr', placeholder: 'Eventvwr', class: 'text-red-600' },
+      { modelKey: 'textarea2', label: 'CHKDSK', placeholder: 'CHKDSK', class: 'text-red-600' }
+    ]
+  },
+
+  RESEAU: {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'Reboot' }
+    ]
+  },
+
+  "SCO DN": {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'Ping' },
+      { modelKey: 'checkbox3', label: 'Branchement mural' },
+      { modelKey: 'checkbox4', label: 'Reboot' },
+      { modelKey: 'checkbox5', label: 'Péréphérique' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1'},
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1'},
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1'},
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1'}
+    ]
+  },
+    "SCO NCR": {
+    checkboxes: [
+      { modelKey: 'checkbox1', label: 'deb/reb alimentation' },
+      { modelKey: 'checkbox2', label: 'Ping' },
+      { modelKey: 'checkbox3', label: 'Branchement mural' },
+      { modelKey: 'checkbox4', label: 'Reboot' },
+      { modelKey: 'checkbox5', label: 'Péréphérique' }
+    ],
+    checkboxHiddens: [
+      { modelKey: 'checkboxhidden1', label: 'Action faite sans succès', dependsOn: 'checkbox1'},
+      { modelKey: 'checkboxhidden2', label: 'Refus manipulation', dependsOn: 'checkbox1'},
+      { modelKey: 'checkboxhidden3', label: "Pas d'accès", dependsOn: 'checkbox1'},
+      { modelKey: 'checkboxhidden4', label: "La question n'a pas été posée", dependsOn: 'checkbox1'}
+    ]
   }
+};
 
-  text.value = {
-  textarea1: '',
-  textarea2: '',
-  textarea3: ''
-  }
+
+watch(() => props.groupe, (newGroupe) => {
+  actionsDossierStore.groupe = newGroupe || ''
+  actionsDossierStore.resetStore()
+  actionsDossierStore.groupe = newGroupe || ''
 })
 
-// const actions = ref({
-//   ping: false,
-//   reboot: false,
-//   alim: false,
-//   branchement: false,
-//   onduleur: false,
-//   nettoyage: false,
-//   no_disque: false,
-//   cable_alim_res_plug: false,
-//   travaux: false,
-//   no_succes: false,
-//   refus: false,
-//   no_acces: false,
-//   no_question: false,
-//   data: false,
-//   voyant: false,
-//   selftest: false,
-//   imp: false,
-//   opos: false,
-//   faisceau: false,
-//   parametrage: false,
-//   bat: false,
-//   vignette: false,
-//   nettoyage_plateau: false,
-//   calibrage: false,
-//   molette: false,
-//   souflette: false,
-//   jaune_diez: false,
-//   alerte_irruption: false,
-//   swap: false,
-//   eteint: false
-// })
+const groupe = computed(() => actionsDossierStore.groupe)
+const actions = computed(() => actionsDossierStore.actions)
+const text = computed(() => actionsDossierStore.text)
 
-// const text = ref({
-//   eventvwr: '',
-//   chkdsks: '',
-//   complements: '',
-//   versoin: '',
-//   hdd: '',
-//   numero: '',
-//   sn: '',
-//   code_erreur: '',
-//   num_serie: '',
-//   sn_ecran: '',
-//   fru_pn_ecran: ''
-// })
-
-// // Optionnel : reset des champs quand le groupe change
-// watch(() => props.groupe, () => {
-//   actions.value = {
-//     ping: false,
-//     reboot: false,
-//     alim: false,
-//     branchement: false,
-//     onduleur: false,
-//     nettoyage: false,
-//     no_disque: false,
-//     cable_alim_res_plug: false,
-//     travaux: false,
-//     no_succes: false,
-//     refus: false,
-//     no_acces: false,
-//     no_question: false,
-//     data: false,
-//     voyant: false,
-//     selftest: false,
-//     imp: false,
-//     opos: false,
-//     faisceau: false,
-//     parametrage: false,
-//     bat: false,
-//     vignette: false,
-//     nettoyage_plateau: false,
-//     calibrage: false,
-//     molette: false,
-//     souflette: false,
-//     jaune_diez: false,
-//     alerte_irruption: false,
-//     swap: false,
-//     eteint: false
-//   }
-
-//   text.value = {
-//     eventvwr: '',
-//     chkdsks: '',
-//     complements: '',
-//     version: '',
-//     hdd: '',
-//     numero: '',
-//     sn: '',
-//     code_erreur: '',
-//     num_serie: '',
-//     sn_ecran: '',
-//     fru_pn_ecran: ''
-//   }
-// })
+const currentGroupConfig = computed(() => groupesConfig[groupe.value] || { checkboxes: [], textareas: [] })
 </script>

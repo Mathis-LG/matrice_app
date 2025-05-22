@@ -4,12 +4,12 @@
 
     <div class="flex gap-4 mt-4 items-center">
       <label class="flex items-center gap-2">
-        <input type="checkbox" v-model="selected.avecCable" />
+        <input type="checkbox" v-model="particulariteStore.selected.avecCable" />
         Avec câble
       </label>
 
       <label class="flex items-center gap-2">
-        <input type="checkbox" v-model="selected.sansCable" />
+        <input type="checkbox" v-model="particulariteStore.selected.sansCable" />
         Sans câble
       </label>
     </div>
@@ -17,7 +17,7 @@
     <div class="mt-4">
       <label class="block font-semibold text-sm mb-1">Rajouter au: </label>
       <textarea
-        v-model="selected.enonce"
+        v-model="particulariteStore.selected.enonce"
         class="border p-2 w-full"
         rows="4"
         placeholder=""
@@ -26,18 +26,10 @@
   </section>
 </template>
 
+
 <script setup>
-import { ref } from 'vue'
+import { useParticulariteDossierStore } from '@/stores/useParticulariteDossierStore'
 
-const selected = ref({
-  avecCable: false,
-  sansCable: false,
-  enonce: ''
-})
+const particulariteStore = useParticulariteDossierStore()
+
 </script>
-
-<style scoped>
-textarea {
-  resize: vertical;
-}
-</style>
