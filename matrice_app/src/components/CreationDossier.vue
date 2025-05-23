@@ -23,8 +23,17 @@
         ESCALADE
       </button>
 
-      <button class="cursor-pointer bg-red-800 hover:bg-red-900 text-white py-2 rounded-lg">ESCALADE INGENICO</button>
-      <button class="cursor-pointer bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg">ESCALADE NCR LOGICIEL</button>
+      <button class="cursor-pointer bg-red-800 hover:bg-red-900 text-white py-2 rounded-lg"
+       @click="goToDemandeEscalade"
+      >
+        ESCALADE INGENICO
+      </button>
+
+      <button class="cursor-pointer bg-green-700 hover:bg-green-800 text-white py-2 rounded-lg"
+       @click="goToDemandeEscalade"
+      >
+        ESCALADE NCR LOGICIEL
+      </button>
       
       <button 
         class="cursor-pointer bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg"
@@ -121,5 +130,9 @@ Support Carrefour`
 
 function goToDemandeIntervention() {
   router.push('/demande-intervention')
+}
+
+function goToDemandeEscalade() {
+  router.push('/escalade')
 }
 </script>
